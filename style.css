@@ -10,7 +10,7 @@
 }
 
 .background {
-  background-image: url('/images/background-foto.png');
+  background-image: url('/images/background-flower.png');
   background-size: 790px 697px;
   width: 790px;
   height: 697px;
@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
 }
 
-.lable {
+.label {
   position: absolute;
   font-size: 70px;
   line-height: 78px;
@@ -30,6 +30,7 @@
 }
 
 .products-wrapp {
+  list-style: none;
   position: relative;
   width: 1110px;
   height: 1191px;
@@ -81,7 +82,7 @@
   justify-content: space-between;
 }
 
-.price-lable {
+.price-label {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
