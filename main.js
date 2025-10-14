@@ -2,20 +2,20 @@
 
 const firstCard = document.querySelector('.card-container');
 const repaintFirstCardButton = document.querySelector('#repaint-first-card-button');
-const firstCardColorHash = '#a969d1ff';
+const PlumColorHash = '#DDA0DD';
 
 repaintFirstCardButton.addEventListener('click', () => {
-  firstCard.style.backgroundColor = firstCardColorHash;
+  firstCard.style.backgroundColor = PlumColorHash;
 })
 
 // красим все карточки
 
 const productCards = document.querySelectorAll('.card-container');
 const repaintAllCardButton = document.querySelector('#repaint-all-card-button');
-const allCardColorHash = '#44a886ff';
+const LimeColorHash = '#00FF00';
 
 repaintAllCardButton.addEventListener('click', () => {
-  productCards.forEach((card) => card.style.backgroundColor = allCardColorHash);
+  productCards.forEach((card) => card.style.backgroundColor = LimeColorHash);
 })
 
 // переходим в Google
@@ -45,12 +45,12 @@ function outputConsoleLog(message) {
 
 // выводим заголовок в консоль
 
-const title = document.querySelector('.label');
+const mainTitle = document.querySelector('.label');
 
-title.addEventListener('mouseover', () => console.log(title.textContent))
+mainTitle.addEventListener('mouseover', () => console.log(title.textContent))
 
 // меняем цвет кнопочки
 
-const paintButton = document.querySelector('#paint-button');
+const colorChangingButton = document.querySelector('#color-changing-button');
 
-paintButton.addEventListener('click', () => paintButton.classList.toggle("aqua"));
+colorChangingButton.addEventListener('click', () => paintButton.classList.toggle("bg-aqua"));
