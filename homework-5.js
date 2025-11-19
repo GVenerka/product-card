@@ -26,15 +26,15 @@ checkSpeed(331);
 // если бюджет превышает цену товара - выводим лог "(ваше название товара) приобретён. Спасибо за покупку!", 
 // если нет - обсчитываем разницу и выводим лог "Вам не хватает X$, пополните баланс".
 
-const product = "Шоколад";
-const productPrice = 99;
-function buyProduct(budget) {
-  const difference = productPrice - budget;
-  budget >= productPrice? console.log(`${product} приобретён. Спасибо за покупку!`): console.log(`Вам не хватает ${difference} рублей, пополните баланс`)
+function buyProduct(product, price, budget) {
+  const difference = price - budget;
+  const purchase = `${product} приобретён. Спасибо за покупку!`;
+  const rejection = `Вам не хватает ${difference} рублей, пополните баланс`;
+  console.log(budget >= price? purchase: rejection);
 }
 
-buyProduct(50);
-buyProduct(555);
+buyProduct("шоколад", 99, 150);
+buyProduct("дубайский шоколад", 450, 348);
 
 //6. Создать 1 функцию и именовать её по своему усмотрению
 
