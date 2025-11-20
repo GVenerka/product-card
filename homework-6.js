@@ -115,5 +115,5 @@ const allBooks = [...books, ...collectionHarryPotter]
 // Написать функцию, которая принимает массив сущностей с задания №9. 
 // Добавляем новое свойство для объекта "isRare (это редкий)" и в зависимости от года выпуска книги устанавливаем true или false.
 
-const checkBooks = allBooks.map(book => ({...book, 'isRare': book.release > 2000? true: false}))
+const checkBooks = allBooks.map(book => ({...book, isRare: book.release > 2000}))
 console.log(checkBooks)
