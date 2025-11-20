@@ -45,9 +45,9 @@ function outputConsoleLog(message) {
 
 // выводим заголовок в консоль
 
-const mainTitle = document.querySelector('.label');
+const mainTitle = document.querySelector('.main-title');
 
-mainTitle.addEventListener('mouseover', () => console.log(title.textContent))
+mainTitle.addEventListener('mouseover', () => console.log(mainTitle.textContent))
 
 // меняем цвет кнопочки
 
