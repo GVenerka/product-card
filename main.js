@@ -53,4 +53,4 @@ mainTitle.addEventListener('mouseover', () => console.log(mainTitle.textContent)
 
 const colorChangingButton = document.querySelector('#color-changing-button');
 
-colorChangingButton.addEventListener('click', () => paintButton.classList.toggle("bg-aqua"));
+colorChangingButton.addEventListener('click', () => colorChangingButton.classList.toggle("bg-aqua"));
