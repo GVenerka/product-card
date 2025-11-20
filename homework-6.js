@@ -6,7 +6,7 @@ const personalData = {
   email: 'gareyevava@gmail.com',
   country: 'Россия',
   city: 'Уфа',
-  marital_status: 'замужем',
+  maritalStatus: 'замужем',
   work: 'домохозяйка',
   education: 'высшее'
 };
@@ -17,9 +17,9 @@ const personalData = {
 const carData = { 
   make: "Chevrolet",
   model: "Camaro Mk5",
-  year_of_manufacture: "2020",
+  yearOfManufacture: "2020",
   color: "Yellow",
-  type_of_box: "Auto"
+  boxType: "Auto"
 };
 
 const carNewData = { ...carData, owner: personalData};
@@ -28,7 +28,7 @@ const carNewData = { ...carData, owner: personalData};
 // Она проверяет, есть ли в объекте свойство "максимальная скорость", если нет - добавляет его и задает значение, 
 // если есть - прекращает выполнение (ничего не делает)
 
-function checkProperty(car) {
+function checkMaxSpeed(car) {
   if ('max_speed' in car) return
   else return { ...car, max_speed: "250"}
 }
@@ -37,11 +37,11 @@ function checkProperty(car) {
 // Написать функцию, которая получает первым аргументом  — объект, 
 // а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
 
-function test(object, propery) {
+function getPropery(object, propery) {
   console.log(propery, object[propery])
 }
 
-test(carData, 'color')
+getPropery(carData, 'color')
 
 // Создать массив, который содержит названия продуктов (просто строки)
 
@@ -55,22 +55,22 @@ const books = [
     title: "Литература. 5 класс часть 2", 
     author: "Коровина, Жураввлев, Коровин", 
     release: 2023,
-    number_of_pages: 319,
-    publishing_house: "Просвещение",
+    numberOfPages: 319,
+    publishingHouse: "Просвещение",
   }, 
   {
     title: "Внеклассное чтение", 
     author: "Марина Владимировна Юдаева", 
     release: 2021,
-    number_of_pages: 127,
-    publishing_house: "Высшая школа",
+    numberOfPages: 127,
+    publishingHouse: "Высшая школа",
   },
   {
     title: "Динозавры", 
     author: "Рысакова Ирина Владимировна", 
     release: 2019,
-    number_of_pages: 96,
-    publishing_house: "РОСМЭН",
+    numberOfPages: 96,
+    publishingHouse: "РОСМЭН",
   }
 ]
 
@@ -78,41 +78,42 @@ const newBook = {
   title: "История. 5класс", 
   author: "Вигасин, Годер, Свенцицкая", 
   release: 2023,
-  number_of_pages: 320,
-  publishing_house: "Просвещение",
+  numberOfPages: 320,
+  publishingHouse: "Просвещение",
 }
 
 books.push(newBook)
 
 // Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной. объединить эти два массива в один
 
-const HarryPotterCollection = [
+const collectionHarryPotter = [
   {
     title: "Гарри Поттер и философский камень", 
     author: "Джоан Кэтлин Роулинг", 
     release: 1997,
-    number_of_pages: 367,
-    publishing_house: "РОСМЭН",
+    numberOfPages: 367,
+    publishingHouse: "РОСМЭН",
   },
   {
     title: "Гарри Поттер и тайная комната", 
     author: "Джоан Кэтлин Роулинг", 
     release: 1998,
-    number_of_pages: 473,
-    publishing_house: "РОСМЭН",
+    numberOfPages: 473,
+    publishingHouse: "РОСМЭН",
   },
   {
     title: "Гарри Поттер и узник Азкабана", 
     author: "Джоан Кэтлин Роулинг", 
     release: 1999,
-    number_of_pages: 512,
-    publishing_house: "РОСМЭН",
+    numberOfPages: 512,
+    publishingHouse: "РОСМЭН",
   },
 ]
 
-const allBooks = [...books, ...HarryPotterCollection]
+const allBooks = [...books, ...collectionHarryPotter]
 
 // Написать функцию, которая принимает массив сущностей с задания №9. 
 // Добавляем новое свойство для объекта "isRare (это редкий)" и в зависимости от года выпуска книги устанавливаем true или false.
 
-const checkBooks = allBooks.map(book => ({...book, 'isRare': book.release > 2000? "rare": "not_rare"}))
+const checkBooks = allBooks.map(book => ({...book, 'isRare': book.release > 2000? true: false}))
+console.log(checkBooks)
