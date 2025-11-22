@@ -21,12 +21,12 @@ searchElement(furniture, 'комод')
 //4. Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать"). 
 // Два вышеуказанных массива с помощью этой функции перевернуть.
 
-function flipOver(array) {
+function showInvertedArray(array) {
   console.log(array.reverse())
 }
 
-flipOver(firstTen)
-flipOver(furniture)
+showInvertedArray(firstTen)
+showInvertedArray(furniture)
 
 //7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 
@@ -35,7 +35,7 @@ console.log(searchComments)
 
 //8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
-const commentsIdPost = comments.map(comment => ({ ...comment, postId: comment.id <= 5? 2: 1}))
+const commentsIdPost = comments.map(comment => ({ ...comment, postId: comment.id <= 5 ? 2: 1}))
 console.log(commentsIdPost)
 
 //9. Перебрать массив, что бы объекты состояли только из айди и имени
