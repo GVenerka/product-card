@@ -29,7 +29,7 @@ function showCards() {
   if (promtResult > 1 && promtResult <= 5) {
     products.slice(0, promtResult).forEach(product => {
       const productClone = cardTemplate.content.cloneNode(true)
-      productClone.querySelector('.product-image').src = product.image;
+      productClone.querySelector('.product-image').src = `/images/${product.image}.png`;
       productClone.querySelector('.product-name').textContent = product.name;
       productClone.querySelector('.product-description').textContent = product.description;
       const compoundList = productClone.querySelector('.product-compound');
