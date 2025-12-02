@@ -14,7 +14,7 @@
   <div class="background"></div>
   <h1 class="main-title">Выбери свой продукт</h1>
   <ul class="products-wrapp">
-    <li class="card-container">
+    <!-- <li class="card-container">
       <img src="/images/moist-mousse.png" alt="Увлажняющий мусс" width="290" height="245">
       <span class="product-category">для нормальной кожи</span>
       <h2 class="product-name">Увлажняющий мусс</h2>
@@ -93,8 +93,25 @@
         <span class="price-label">Цена</span>
         <span class="product-price">7520 &#8381;</span>
       </div>
-    </li>
+    </li> -->
   </ul>
+  <template class="card-template">
+    <li class="card-container">
+      <img class="product-image">
+      <span class="product-category">для нормальной кожи</span>
+      <h2 class="product-name"></h2>
+      <p class="product-description"></p>
+      <span>Cостав:</span>
+      <ul class="product-compound"></ul>
+      <div class="price-container">
+        <span class="price-label">Цена</span>
+        <div>
+          <span class="product-price"></span>
+          <span style="font-size: 20px; line-height: 24px;"> &#8381;</span>
+        </div>
+      </div>
+    </li>
+  </template>
   <div>
     <button class="button" id="repaint-first-card-button">Перекрасить первую карточку</button>
     <button class="button" id="repaint-all-card-button">Перекрасить все карточки</button>
@@ -106,6 +123,7 @@
   <script src="homework-5.js"></script>
   <script src="homework-6.js"></script>
   <script src="homework-7.js" type="module"></script>
+  <script src="homework-8.js" type="module"></script>
 </body>
 
 </html>
