@@ -30,8 +30,8 @@ closeModal.addEventListener('click', (event) => {
 
 // 6 
 
-const password = document.querySelector('[name=password]');
-const repeatPassword = document.querySelector('[name=repeat-password]');
+const password = document.querySelector('#password');
+const repeatPassword = document.querySelector('#repeat-password');
 
 const registration = document.querySelector('.registration-form');
 registration.addEventListener('submit', (event) => {
