@@ -1,5 +1,8 @@
 // 4 задание
 
+import { Form } from "./Form.js";
+import { Modal } from "./Modal.js";
+
 const subscribe = document.querySelector('.subscribe-wrapp');
 subscribe.addEventListener('submit', (event) => {
   event.preventDefault()
@@ -12,37 +15,27 @@ subscribe.addEventListener('submit', (event) => {
 
 //5 
 
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
+const modal = new Modal('#modal');
 
 const modalShowed = document.querySelector('#registration-button');
 modalShowed.addEventListener('click', () => {
-  modal.classList.add("modal-showed");
-  overlay.classList.add("overlay-showed");
+  modal.openModal();
 })
 
-const closeModal = document.querySelector('.close-modal');
-closeModal.addEventListener('click', (event) => {
-  event.preventDefault();
-  modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
-})
+modal.closeButton();
 
 // 6 
 
-const password = document.querySelector('#password');
-const repeatPassword = document.querySelector('#repeat-password');
-
-const registration = document.querySelector('.registration-form');
-registration.addEventListener('submit', (event) => {
+const registration = new Form('#registration-form');
+const registrationButton = document.querySelector('#registration');
+registrationButton.addEventListener('click', (event) => {
   event.preventDefault();
-  if(password.value !== repeatPassword.value) {
-    alert('Пароли не совпадают');
-    return;
-  }
-  const formData = new FormData(registration);
-  const user = Object.fromEntries(formData.entries());
-  modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
-  console.log(user);
+  registration.checkValidation();
+  registration.getFormValue();
+  modal.closeModal();
+})
+
+const resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', () => {
+  registration.reset();
 })
