@@ -22,7 +22,7 @@ repaintAllCardButton.addEventListener('click', () => {
 
 const openGoogleButton = document.querySelector('#open-google');
 
-openGoogleButton.addEventListener('click', openGoogle)
+openGoogleButton.addEventListener('click', openGoogle);
 
 function openGoogle() {
   const answer = confirm('Вы действительно хотите перейти в Google?');
@@ -36,18 +36,18 @@ function openGoogle() {
 
 const outputLogButton = document.querySelector('#output-console-log');
 
-outputLogButton.addEventListener('click', () => outputConsoleLog('ДЗ №4'))
+outputLogButton.addEventListener('click', () => outputConsoleLog('ДЗ №4'));
 
 function outputConsoleLog(message) {
-  alert(message)
-  console.log(message)
+  alert(message);
+  console.log(message);
 }
 
 // выводим заголовок в консоль
 
 const mainTitle = document.querySelector('.main-title');
 
-mainTitle.addEventListener('mouseover', () => console.log(mainTitle.textContent))
+mainTitle.addEventListener('mouseover', () => console.log(mainTitle.textContent));
 
 // меняем цвет кнопочки
 

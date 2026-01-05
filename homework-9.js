@@ -5,7 +5,7 @@ import { Modal } from "./Modal.js";
 
 const subscribe = document.querySelector('.subscribe-wrapp');
 subscribe.addEventListener('submit', (event) => {
-  event.preventDefault()
+  event.preventDefault();
   const email = event.target;
   const formData = new FormData(email);
   const userEmail = Object.fromEntries(formData.entries());
@@ -22,7 +22,7 @@ modalShowed.addEventListener('click', () => {
   modal.openModal();
 })
 
-modal.closeButton();
+modal.closeModalWithButton();
 
 // 6 
 
@@ -30,7 +30,12 @@ const registration = new Form('#registration-form');
 const registrationButton = document.querySelector('#registration');
 registrationButton.addEventListener('click', (event) => {
   event.preventDefault();
-  registration.checkValidation();
+  const password = document.querySelector('#password');
+  const repeatPassword = document.querySelector('#repeat-password');
+  if (password.value !== repeatPassword.value) {
+      alert('Пароли не совпадают');
+      return;
+    }
   registration.getFormValue();
   modal.closeModal();
 })

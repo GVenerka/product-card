@@ -13,7 +13,8 @@ showTemperature("Уфа", "-6");
 const SPEED_OF_SOUND = 331;
 function checkSpeed(speed) {
   if (speed > SPEED_OF_SOUND) console.log("Сверхзвуковая скорость")
-    else if (speed < SPEED_OF_SOUND) console.log("Дозвуковая скорость")
+  else
+    if (speed < SPEED_OF_SOUND) console.log("Дозвуковая скорость")
     else console.log("Скорость звука")
 }
 
@@ -30,7 +31,7 @@ function buyProduct(product, price, budget) {
   const difference = price - budget;
   const purchase = `${product} приобретён. Спасибо за покупку!`;
   const rejection = `Вам не хватает ${difference} рублей, пополните баланс`;
-  console.log(budget >= price? purchase: rejection);
+  console.log(budget >= price ? purchase : rejection);
 }
 
 buyProduct("шоколад", 99, 150);
@@ -39,8 +40,8 @@ buyProduct("дубайский шоколад", 450, 348);
 //6. Создать 1 функцию и именовать её по своему усмотрению
 
 function calculateSpeed(distance, time) {
-  const speed = distance/time;
-  console.log(`Ваша скорость ${speed} км/ч`)
+  const speed = distance / time;
+  console.log(`Ваша скорость ${speed} км/ч`);
 }
 
 calculateSpeed(300, 3);

@@ -29,8 +29,10 @@ const carNewData = { ...carData, owner: personalData};
 // если есть - прекращает выполнение (ничего не делает)
 
 function checkMaxSpeed(car) {
-  if ('max_speed' in car) return
-  else return { ...car, max_speed: "250"}
+  if ('max_speed' in car) 
+    return
+  else 
+    return { ...car, max_speed: "250"}
 }
 
 
@@ -41,11 +43,11 @@ function getPropery(object, propery) {
   console.log(propery, object[propery])
 }
 
-getPropery(carData, 'color')
+getPropery(carData, 'color');
 
 // Создать массив, который содержит названия продуктов (просто строки)
 
-const products = ["молоко", "хлеб", "сметана", "кефир", "торт"]
+const products = ["молоко", "хлеб", "сметана", "кефир", "торт"];
 
 // Создать массив, состоящий из объектов, где объект представляет собой книгу. 
 // добавить еще одну книгу в конец списка.
@@ -72,7 +74,7 @@ const books = [
     numberOfPages: 96,
     publishingHouse: "РОСМЭН",
   }
-]
+];
 
 const newBook = {
   title: "История. 5класс", 
@@ -80,9 +82,9 @@ const newBook = {
   release: 2023,
   numberOfPages: 320,
   publishingHouse: "Просвещение",
-}
+};
 
-books.push(newBook)
+books.push(newBook);
 
 // Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной. объединить эти два массива в один
 
@@ -108,12 +110,12 @@ const collectionHarryPotter = [
     numberOfPages: 512,
     publishingHouse: "РОСМЭН",
   },
-]
+];
 
-const allBooks = [...books, ...collectionHarryPotter]
+const allBooks = [...books, ...collectionHarryPotter];
 
 // Написать функцию, которая принимает массив сущностей с задания №9. 
 // Добавляем новое свойство для объекта "isRare (это редкий)" и в зависимости от года выпуска книги устанавливаем true или false.
 
-const checkBooks = allBooks.map(book => ({...book, isRare: book.release > 2000}))
-console.log(checkBooks)
+const checkBooks = allBooks.map(book => ({...book, isRare: book.release > 2000}));
+console.log(checkBooks);

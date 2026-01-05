@@ -1,26 +1,20 @@
 export class Form {
 
   constructor(id) {
-    this.registrationForm = document.querySelector(id)
+    this.form = document.querySelector(id);
   }
 
   getFormValue() {
-    const formData = new FormData(this.registrationForm);
-    const user = Object.fromEntries(formData.entries());
-    console.log(user);
+    const formData = new FormData(this.form);
+    const formValue = Object.fromEntries(formData.entries());
+    console.log(formValue);
   }
 
   checkValidation() {
-    const password = document.querySelector('#password');
-    const repeatPassword = document.querySelector('#repeat-password');
-
-    if (password.value !== repeatPassword.value) {
-      alert('Пароли не совпадают');
-      return;
-    }
+    this.form.checkValidity();
   }
 
   reset() {
-    this.registrationForm.reset();
+    this.form.reset();
   }
 }
