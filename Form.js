@@ -6,15 +6,15 @@ export class Form {
 
   getFormValue() {
     const formData = new FormData(this.form);
-    const formValue = Object.fromEntries(formData.entries());
-    console.log(formValue);
+    return formValue = Object.fromEntries(formData.entries());
   }
 
-  checkValidation() {
-    this.form.checkValidity();
+  isValid() {
+    return this.form.checkValidity();
   }
 
   reset() {
     this.form.reset();
   }
+
 }

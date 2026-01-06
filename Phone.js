@@ -1,4 +1,5 @@
 export class Smartphone {
+
   constructor(name, model, country) {
     this.name = name;
     this.model = model;
@@ -8,4 +9,5 @@ export class Smartphone {
   getInfo() {
     console.log(`Смартфон ${this.name} ${this.model} произведен в ${this.country}`);
   }
+  
 }
