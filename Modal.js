@@ -1,5 +1,5 @@
 export class Modal {
-  
+
   constructor(id) {
     this.modalWindow = document.querySelector(id);
   }
@@ -20,7 +20,7 @@ export class Modal {
     return this.modalWindow.classList.contains('modal-showed');
   }
 
-  initClose () {
+  initClose() {
     document.querySelector('.close-modal').addEventListener('click', (event) => {
       event.preventDefault();
       this.modalWindow.classList.remove("modal-showed");
