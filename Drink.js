@@ -14,7 +14,7 @@ export class Drink {
   }
 
   getDrinkTemperature() {
-    return (`температура ${this.name} ${this.#temperature} градусов`);
+    return (`температура ${ this.name } ${ this.#temperature } градусов`);
   }
 
   setDrinkTemperature(property) {
@@ -23,12 +23,12 @@ export class Drink {
 
   #prepareDrink() {
     this.setDrinkTemperature();
-    return (`${this.name} готовится`);
+    return (`${ this.name } готовится`);
   }
 
   serveDrink() {
     this.#prepareDrink();
-    return (`Ваш ${this.name} готов`);
+    return (`Ваш ${ this.name } готов`);
   }
 
 }

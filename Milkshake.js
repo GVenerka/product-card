@@ -7,4 +7,7 @@ export class Milkshake extends Drink {
     this.taste = taste;
   }
   
+  chooseTaste(taste) {
+    this.taste = taste;
+  }
 }

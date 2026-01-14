@@ -7,4 +7,7 @@ export class Coffee extends Drink {
     this.grains = grains;
   }
   
+  chooseGrains(grains) {
+    this.grains = grains;
+  }
 }

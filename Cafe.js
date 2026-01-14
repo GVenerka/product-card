@@ -9,8 +9,8 @@ export class Cafe {
     return ((this.name, this.location).toString());
   }
 
-  orderDrink(property) {
-    property.serveDrink();
+  orderDrink(drink) {
+    drink.serveDrink();
   }
 
 }

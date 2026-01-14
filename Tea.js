@@ -7,4 +7,7 @@ export class Tea extends Drink {
     this.type = type;
   }
   
+  showType() {
+    console.log(this.type);
+  }
 }

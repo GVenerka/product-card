@@ -7,4 +7,7 @@ export class Juice extends Drink {
     this.fruit = fruit;
   }
   
+  chooseFruit(fruit) {
+    this.fruit = fruit;
+  }
 }
