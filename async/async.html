@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="async.css">
+  <title>Users</title>
+</head>
+
+<body>
+    <div class="background">
+      <ul class="users-wrapp">
+        <div id="message">Данные загружаются...</div>
+        <template class="user-template">
+          <li class="user-conteiner">
+            <div class="text-wrapp">
+              <span>Имя: </span>
+              <span class="user-name"></span>
+            </div>
+            <div class="text-wrapp">
+              <span>Фамилия: </span>
+              <span class="user-surname"></span>
+            </div>
+            <div class="text-wrapp">
+              <span>Почта: </span>
+              <span class="user-email"></span>
+            </div>
+            <div class="text-wrapp">
+              <span>Возраст: </span>
+              <span class="user-age"></span>
+            </div>
+            <div class="text-wrapp">
+              <span>Город: </span>
+              <span class="user-city"></span>
+            </div>
+            <button class="user-delete-button" id="user-delete-button">Удалить</button>
+          </li>
+        </template>
+      </ul>
+      <button class="button" id="get-users-button">Показать всех пользователей</button>
+      <button class="button" id="all-users-delete-button">Удалить всех</button>
+    </div>
+  </div>
+  <script src="async.js"></script>
+</body>
+</html>

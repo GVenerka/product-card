@@ -1,0 +1,42 @@
+[
+  {
+    "id" : "1",
+    "name" : "Garry",
+    "surname" : "Potter",
+    "email" : "garrypotter@gmail.com",
+    "age" : "21",
+    "city" : "London"
+  },
+  {
+    "id" : "2",
+    "name" : "Ronald",
+    "surname" : "Weasley",
+    "email" : "r.weasley@gmail.com",
+    "age" : "20",
+    "city" : "The fox hole"
+  },
+  {
+    "id" : "3",
+    "name" : "Hermione",
+    "surname" : "Granger",
+    "email" : "hermi-grain@gmail.com",
+    "age" : "20",
+    "city" : "Hampstead"
+  },
+  {
+    "id" : "4",
+    "name" : "Draco",
+    "surname" : "Malfoy",
+    "email" : "draco&malfoy@gmail.com",
+    "age" : "21",
+    "city" : "Wiltshire"
+  },
+  {
+    "id" : "5",
+    "name" : "Tom",
+    "surname" : "Riddle",
+    "email" : "voldemort@gmail.com",
+    "age" : "24",
+    "city" : "Little Hangleton"
+  }
+]
