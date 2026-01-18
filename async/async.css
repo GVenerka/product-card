@@ -6,7 +6,7 @@
 }
 
 .background {
-  background-image: url('/async/bg-image.jpg');
+  background-color: #36363cfe;
   background-size: 100%;
   width: 1920px;
   height: 925px;

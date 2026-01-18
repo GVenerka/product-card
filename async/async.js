@@ -1,16 +1,20 @@
 const usersWrapp = document.querySelector('.users-wrapp');
 const loadingMessage = document.querySelector('#message');
 
-function loadData() {
-  const storedData = localStorage.getItem('users');
-  if (storedData) {
-    displayUsers(JSON.parse(storedData));
+function loadUsers() {
+  const storedUsers = localStorage.getItem('users');
+  if (storedUsers) {
+    renderUsers(JSON.parse(storedUsers));
   } else {
-    fetchData();
+    fetchUsers();
   }
 }
 
-function fetchData() {
+function returnUsers() {
+  return (JSON.parse(localStorage.getItem('users')) || [])
+} 
+
+function fetchUsers() {
   setTimeout(() => {
     fetch('./users.json')
       .then(response => {
@@ -21,7 +25,7 @@ function fetchData() {
       })
       .then(users => {
         localStorage.setItem('users', JSON.stringify(users));
-        displayUsers(users);
+        renderUsers(users);
       })
       .catch(error => {
         console.error('Ошибка при загрузке данных:', error);
@@ -31,7 +35,7 @@ function fetchData() {
 
 const userTemplate = document.querySelector('.user-template');
 
-function displayUsers(users) {
+function renderUsers(users) {
   loadingMessage.style.display = 'none';
   usersWrapp.innerHTML = '';
   users.forEach(user => {
@@ -48,13 +52,13 @@ function displayUsers(users) {
   });
 }
 
-window.onload = loadData;
+window.onload = loadUsers;
 
 function deleteUser(id) {
-  const users = JSON.parse(localStorage.getItem('users')) || [];
+  const users = returnUsers();
   const updatedUsers = users.filter(user => user.id !== id);
   localStorage.setItem('users', JSON.stringify(updatedUsers));
-  displayUsers(updatedUsers);
+  renderUsers(updatedUsers);
 }
 
 const allUsersDelete = document.querySelector('#all-users-delete-button');
@@ -65,10 +69,5 @@ allUsersDelete.addEventListener('click', () => {
 
 const getUsersButton = document.querySelector('#get-users-button');
 getUsersButton.addEventListener('click', () => {
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-  if (users.length === 0) {
-    alert('Нет пользователей для отображения.');
-  } else {
-    displayUsers(users);
-  }
+  loadUsers();
 });
