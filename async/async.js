@@ -10,8 +10,8 @@ function loadUsers() {
   }
 }
 
-function returnUsers() {
-  return (JSON.parse(localStorage.getItem('users')) || [])
+function getUsersFromLocalStorage() {
+  return JSON.parse(localStorage.getItem('users')) || [];
 } 
 
 function fetchUsers() {
@@ -55,7 +55,7 @@ function renderUsers(users) {
 window.onload = loadUsers;
 
 function deleteUser(id) {
-  const users = returnUsers();
+  const users = getUsersFromLocalStorage();
   const updatedUsers = users.filter(user => user.id !== id);
   localStorage.setItem('users', JSON.stringify(updatedUsers));
   renderUsers(updatedUsers);
